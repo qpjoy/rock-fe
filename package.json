@@ -1,0 +1,41 @@
+{
+  "name": "rock-fe",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "git@github.com:qpjoy/rock-fe.git",
+  "author": "15150121121@126.com",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3",
+    "@commitlint/config-lerna-scopes": "^18.4.3",
+    "@typescript-eslint/eslint-plugin": "^6.16.0",
+    "@typescript-eslint/parser": "^6.16.0",
+    "commitlint": "^18.4.3",
+    "eslint": "^8.56.0",
+    "husky": "^8.0.3",
+    "lerna": "^8.0.1",
+    "lerna-changelog": "^2.2.0",
+    "rimraf": "^5.0.5",
+    "scripty": "^2.1.1"
+  },
+  "workspaces": [
+    "packages/*",
+    "packages/vue/*",
+    "apps1/*"
+  ],
+  "scripts": {
+    "greet": "scripty",
+    "api-docs": "scripty",
+    "build": "scripty",
+    "test": "scripty",
+    "lint": "scripty",
+    "clean": "scripty",
+    "rm": "scripty",
+    "commit": "cz"
+  },
+  "scripty": {
+    "path": "./scripts/workspace"
+  }
+}
