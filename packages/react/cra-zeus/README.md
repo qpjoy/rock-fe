@@ -7,6 +7,10 @@ yarn add @babel/plugin-proposal-private-property-in-object -D
 
 yarn add tailwindcss postcss autoprefixer -D
 npx tailwindcss init
+
+# redux
+yarn add @reduxjs/toolkit
+yarn add react-redux
 ```
 
 ### Plugin
