@@ -1,0 +1,21 @@
+.app {
+  padding: 1px;
+  width: 100%;
+}
+
+.box {
+  margin: 1rem;
+  padding: 0.5rem;
+  width: 100px;
+  height: 100px;
+  font-size: 0.9rem;
+}
+
+p {
+  margin: 0.2em;
+  font-size: 0.85rem;
+}
+
+button {
+  margin-bottom: 0.5rem;
+}

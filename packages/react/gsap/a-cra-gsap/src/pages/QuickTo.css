@@ -1,0 +1,21 @@
+.app {
+  padding: 10px;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flair {
+  position: fixed;
+  transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  background-image: url(../images/flair.webp);
+  background-size: contain;
+  background-repeat: no-repeat;
+  will-change: transform;
+}
