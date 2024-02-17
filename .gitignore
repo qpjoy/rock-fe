@@ -124,3 +124,6 @@ _config.yml
 # ionic 
 build/*
 !build/.npmkeep
+
+# electron
+release-builds

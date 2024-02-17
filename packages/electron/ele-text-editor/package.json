@@ -1,0 +1,12 @@
+{
+  "name": "textapp",
+  "version": "1.0.0",
+  "main": "main.js",
+  "license": "MIT",
+  "scripts": {
+    "electron": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^28.2.2"
+  }
+}

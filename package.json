@@ -23,6 +23,7 @@
   "workspaces": [
     "packages/*",
     "packages/vue/*",
+    "packages/electron1/*",
     "apps1/*"
   ],
   "scripts": {

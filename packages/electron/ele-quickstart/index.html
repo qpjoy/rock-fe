@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <title>Hello from Electron renderer!</title>
+  </head>
+  <body>
+    <h1>Hello from Electron renderer!</h1>
+    <p>👋</p>
+    <p id="info"></p>
+    <!-- <h1>Hello World!</h1>
+    We are using Node.js <span id="node-version"></span>, Chromium
+    <span id="chrome-version"></span>, and Electron
+    <span id="electron-version"></span>. -->
+
+    Title: <input id="title" />
+    <button id="btn" type="button">Set</button>
+
+    <button type="button" id="btn">Open a File</button>
+    File path: <strong id="filePath"></strong>
+
+    Current value: <strong id="counter">0</strong>
+
+    <!-- You can also require other files to run in this process -->
+    <script src="./renderer.js"></script>
+    <script>
+      window.onmessage = (event) => {
+        if (event.source === window && event.data === "main-world-port") {
+          const [port] = event.ports;
+          port.onmessage = (event) => {
+            console.log("from main process: ", event.data);
+            port.postMessage(event.data.test * 2);
+          };
+        }
+      };
+    </script>
+  </body>
+</html>
