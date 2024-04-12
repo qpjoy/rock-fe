@@ -1,0 +1,14 @@
+@startuml
+title 使用方括号([])表示的线颜色
+class foo类
+class bar类
+bar类1 : [#red]
+bar类2 : [#green]
+bar类3 : [#blue]
+
+foo类 --> bar类
+foo类 -[#red]-> bar类1 : [#red]
+foo类 -[#green]-> bar类2 : [#green]
+foo类 -[#blue]-> bar类3 : [#blue]
+' foo类 -[#blue;#yellow;#green]-> bar类4
+@enduml

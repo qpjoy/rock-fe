@@ -1,0 +1,18 @@
+@startuml
+title 使用方括号([])表示的线宽度
+class foo类
+class bar类
+bar类1 : [thickness=1]
+bar类2 : [thickness=2]
+bar类3 : [thickness=4]
+bar类4 : [thickness=8]
+bar类5 : [thickness=16]
+
+foo类 --> bar类
+foo类 -[thickness=1]-> bar类1 : [1]
+foo类 -[thickness=2]-> bar类2 : [2]
+foo类 -[thickness=4]-> bar类3 : [4]
+foo类 -[thickness=8]-> bar类4 : [8]
+foo类 -[thickness=16]-> bar类5 : [16]
+' foo类 -[#blue;#yellow;#green]-> bar类4
+@enduml

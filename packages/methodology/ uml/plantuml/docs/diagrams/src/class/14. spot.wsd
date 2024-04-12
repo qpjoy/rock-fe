@@ -1,0 +1,4 @@
+@startuml
+class System << (s, #FF7700) SingleTon >>
+class Date << (D, orchid) >>
+@enduml

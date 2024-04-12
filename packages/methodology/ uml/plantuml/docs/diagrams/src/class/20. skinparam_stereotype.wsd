@@ -1,0 +1,18 @@
+@startuml
+skinparam class {
+    BackgroundColor PaleGreen
+    ArrowColor SeaGreen
+    BorderColor SpringGreen
+    BackgroundColor<<Foo>> Wheat
+    BorderColor<<Foo>> Tomato
+}
+skinparam stereotypeCBackgroundColor YellowGreen
+skinparam stereotypeCBackgroundColor<< Foo >> DimGray
+
+类1 <<Foo>>
+类3 <<Foo>>
+类1 "1" *-- "*" 类2 : 包含(contains)
+
+类3 o-- 类4 : 聚合(aggregation)
+
+@enduml

@@ -1,0 +1,18 @@
+@startuml
+' left to right direction
+
+class User类 {
+    id : INTEGER
+    ..
+    其他id : INTEGER
+}
+
+class Email类 {
+    id : INTEGER
+    ..
+    用户_id : INTEGER
+    地址 : STRING
+}
+
+User类::id *-- Email类::用户_id
+@enduml

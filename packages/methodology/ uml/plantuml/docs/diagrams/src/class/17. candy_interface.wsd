@@ -1,0 +1,4 @@
+@startuml
+class foo类
+bar ()- foo类
+@enduml

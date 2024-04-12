@@ -1,0 +1,16 @@
+@startuml
+
+skinparam backgroundColor AntiqueWhite/Gold
+skinparam classBackgroundColor Wheat|CornflowerBlue
+
+class 类1 #red-green
+note left of 类1 #blue\9932CC
+    这是foo类的
+    渐变颜色
+end note
+
+package 包1 #GreenYellow/LightGoldenRodYellow {
+    class 类2
+}
+
+@enduml

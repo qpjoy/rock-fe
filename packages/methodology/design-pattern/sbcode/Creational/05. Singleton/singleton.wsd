@@ -1,0 +1,16 @@
+@startuml
+
+left to right direction
+
+skinparam ClassStereotypeFontSize 0
+skinparam PackageStyle rectangle
+skinparam Linetype ortho
+
+package "Client Application" as clientApplication {}
+
+class Singleton {
+    + instance: Singleton
+}
+
+clientApplication o--> Singleton
+Singleton -> Singleton

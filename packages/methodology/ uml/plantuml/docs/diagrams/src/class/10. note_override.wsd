@@ -1,0 +1,16 @@
+@startuml
+class A {
+    {static} int counter
+    +void {abstract} start(int timeoutms)
+    +void {abstract} start(Duration timeout)
+}
+note left of A::counter
+    该成员已注释
+end note
+note right of A::"start(int timeoutms)"
+    这个start方法的参数是int类型
+end note
+note right of A::"start(duration timeout)"
+    这个start方法的参数是Duration类型
+end note
+@enduml

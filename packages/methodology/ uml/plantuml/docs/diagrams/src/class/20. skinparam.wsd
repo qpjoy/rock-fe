@@ -1,0 +1,12 @@
+@startuml
+skinparam class {
+    BackgroundColor PaleGreen
+    ArrowColor SeaGreen
+    BorderColor SpringGreen
+}
+skinparam StereotypeCBackgroundColor YellowGreen
+
+类01 "1" *-- "many" 类02 : 包含
+类03 o-- 类04 : 聚合
+
+@enduml

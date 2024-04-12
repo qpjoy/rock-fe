@@ -1,0 +1,13 @@
+@startuml
+class Foo类 {
+    + 字段1
+    + 字段2
+}
+class Bar类 {
+    + 字段3
+    + 字段4
+}
+
+Foo类::字段1 --> Bar类::字段3 : foo
+Foo类::字段2 --> Bar类::字段4 : bar
+@enduml

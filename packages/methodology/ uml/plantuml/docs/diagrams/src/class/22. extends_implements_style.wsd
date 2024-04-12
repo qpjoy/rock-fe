@@ -1,0 +1,19 @@
+@startuml
+title 使用方括号([])表示的线样式(有标签版)
+
+class foo类
+class bar类
+bar类1 : [bold]
+bar类2 : [dashed]
+bar类3 : [dotted]
+bar类4 : [hidden]
+bar类5 : [plain]
+
+foo类 --> bar类 : Ø
+foo类 -[bold]-> bar类1 : [bold]
+foo类 -[dashed]-> bar类2 : [dashed]
+foo类 -[dotted]-> bar类3 : [dotted]
+foo类 -[hidden]-> bar类4 : [hidden]
+foo类 -[plain]-> bar类5 : [plain]
+
+@enduml

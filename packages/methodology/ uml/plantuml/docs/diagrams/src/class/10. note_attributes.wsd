@@ -1,0 +1,12 @@
+@startuml
+class A {
+    {static} int counter
+    +void {abstract} start(int timeout)
+}
+note left of A::counter
+    该成员已注释
+end note
+note right of A::start
+    在 UML 注释了此方法
+end note
+@enduml

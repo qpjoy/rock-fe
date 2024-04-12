@@ -1,0 +1,155 @@
+@startuml
+
+' scale 750 width
+
+left to right direction
+' skinparam actorStyle awesome
+skinparam packageStyle rectangle
+
+' skinparam linetype polyline
+
+SkinParam {
+    NodeSep 290 ' horizontal spacing
+    RankSep 45 ' vertical spacing
+}
+
+' skinparam linetype ortho
+
+' skinparam groupInheritance 2
+
+' together t1 {
+    actor :Super Admin: as Admin
+    actor :System User: as SysUser
+' }
+' Admin ----[hidden]right---- SysUser
+
+
+together t2 {
+    actor :Manager: as Manager
+    actor :User: as User
+}
+
+
+
+
+package management {
+    ' Super Admin privilege
+
+    together manage{
+        usecase (Manage Users and Full Application) as ManageAll
+        usecase (Manage Create Survey) as ManageCreateSurvey
+        usecase (Manage Question) as ManageQues
+
+        ManageAll -[hidden]left- ManageCreateSurvey
+        ManageCreateSurvey -[hidden]left- ManageQues
+    }
+    together survey {
+        ' Manager privilege
+        usecase (Create Survey) as CreateSurvey
+        usecase (View Reports) as ViewReports
+        usecase (Check Results) as CheckResults
+
+        CreateSurvey -[hidden]left- ViewReports
+        ViewReports -[hidden]left- CheckResults
+    }
+
+    manage -[hidden]down-- survey
+
+
+    together emptyTop {
+        usecase (123) as 123
+        usecase (1234) as 1234
+        usecase (1235) as 12345
+
+        123 -[hidden]left- 1234
+        1234 -[hidden]left- 12345
+    }
+
+    together landing {
+        usecase (Login and Logout from System) as Land
+        usecase (Update My Profile) as Profile
+        usecase (Change Account Password) as ChangePass
+
+        Land -[hidden]left- Profile
+        Profile -[hidden]left- ChangePass
+    }
+
+    ' together emptyBot {
+    '     usecase (0123) as 0123
+    '     usecase (01234) as 01234
+    '     usecase (01235) as 012345
+
+    '     0123 -[hidden]left- 01234
+    '     01234 -[hidden]left- 012345
+    ' }
+
+    landing -[hidden]up- emptyTop
+    ' emptyBot -[hidden]up- landing
+
+
+    together feedback {
+        usecase (Manage User Response) as ManageUserRes
+        usecase (Manage Share Survey) as ManageShareSurvey
+        usecase (Manage Survey ID) as ManageSurveyID
+
+        ManageUserRes -[hidden]left- ManageShareSurvey
+        ManageShareSurvey -[hidden]left- ManageSurveyID
+    }
+    
+    together func {
+        usecase (Search Survey) as SearchSurvey
+        usecase (Fill Survey) as FillSurvey
+        usecase (Check Response) as CheckResponse
+
+        SearchSurvey -[hidden]left- FillSurvey
+        FillSurvey -[hidden]left- CheckResponse
+    }
+
+    feedback -[hidden]down-- func
+}
+
+hide emptyTop
+
+' Admin ----right---- SysUser
+' User ----right---- Manager
+
+management -[hidden]down- t2
+' management -right-- Manager
+
+' manage -[hidden]right- survey
+
+' landing -[hidden]up- manage
+
+
+    Admin -- ManageAll
+    Admin -- ManageCreateSurvey
+    Admin -- ManageQues
+    Admin -- Land
+    Admin -- Profile
+    Admin -- ChangePass
+    Admin -- ManageUserRes
+    Admin -- ManageShareSurvey
+    Admin -- ManageSurveyID
+
+    SysUser -- ManageCreateSurvey
+    SysUser -- Land
+    SysUser -- Profile
+    SysUser -- ChangePass
+    SysUser -- ManageUserRes
+    SysUser -- ManageShareSurvey
+    SysUser -- ManageSurveyID
+
+    CreateSurvey -- Manager
+    ViewReports -- Manager
+    CheckResults -- Manager
+    Land -- Manager
+    Profile -- Manager
+    ChangePass -- Manager
+
+    Land -right- User
+    Profile -- User
+    ChangePass -- User
+    SearchSurvey -- User
+    FillSurvey -- User
+    CheckResponse -- User
+@enduml

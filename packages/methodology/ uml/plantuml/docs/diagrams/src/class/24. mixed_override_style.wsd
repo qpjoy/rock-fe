@@ -1,0 +1,7 @@
+@startuml
+class foo类
+foo类 --> bar类 : 默认
+foo类 --> bar类1  #line:red;line.bold;text:red : 红色粗线
+foo类 --> bar类2 #green;line.dashed;text:green : 绿色断线
+foo类 --> bar类3 #blue;line.dotted;text:blue : 蓝色点线
+@enduml

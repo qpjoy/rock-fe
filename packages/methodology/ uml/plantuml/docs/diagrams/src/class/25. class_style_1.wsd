@@ -1,0 +1,10 @@
+@startuml
+class bar类 #line:green;back:lightblue
+class bar类2 #lightblue;line:green
+
+class Foo类1 #back:red;line:00FFFF
+class Foo类Dashed #line.dashed:blue
+class Foo类Dotted #line.dotted:blue
+class Foo类Bold #line.bold
+class Demo类1 #back:lightgreen|yellow;header:blue/red
+@enduml

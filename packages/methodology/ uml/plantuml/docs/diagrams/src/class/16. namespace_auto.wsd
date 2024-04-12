@@ -1,0 +1,9 @@
+@startuml
+
+' set namespaceSeparator ::
+set namespaceSeparator none
+class X1::X2::foo {
+    some info
+}
+
+@enduml

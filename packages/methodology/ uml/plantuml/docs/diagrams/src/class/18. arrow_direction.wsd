@@ -1,0 +1,10 @@
+@startuml
+教室 o- 学生
+教室 *-- 椅子
+
+' left to right direction
+foo -left-> dummyLeft
+foo -right-> dummyRight
+foo -up-> dummyUp
+foo -down-> dummyDown
+@enduml

@@ -1,0 +1,12 @@
+@startuml
+abstract 抽象类
+annotation 注解  #pink ##[bold]red
+class 类 #palegreen ##[dashed]green
+interface 接口 #aliceblue ##[dotted]blue
+
+
+abstract 抽象类1
+annotation 注解1 #pink;line:red;line.bold;text:red
+class 类1 #palegreen;line:green;line.dashed;text:green
+interface 接口1 #aliceblue;line:blue;line.dotted;text:blue
+@enduml
